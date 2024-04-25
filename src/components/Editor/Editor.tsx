@@ -47,7 +47,10 @@ const Editor = () => {
             return currentLineText === '/';
           }}
         >
-          <button className="flex items-center gap-2 p-1 rounded min-w-[280px] hover:bg-zinc-600">
+          <button
+            className="flex items-center gap-2 p-1 rounded min-w-[280px] hover:bg-zinc-600"
+            onClick={() => editor.chain().focus().toggleBulletList().run()}
+          >
             <img
               src="http://www.notion.so/images/blocks/text/en-US.png"
               alt="Text"
